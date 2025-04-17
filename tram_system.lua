@@ -10,7 +10,7 @@ local door_close_message = "&wAs the doors close and the tram pulls away from th
 
 -- If true, create command to view transport status
 local create_display_board = true 
--- Command to view transport status
+-- Word to 'look' at to view transport status
 local display_board_command = "display" 
 -- Message echoed to the platform rooms when the display board is updated. If empty (""), no update message will be echoed.
 local display_board_message = "&wThe digital display board beeps softly as the transport information is updated."
@@ -98,7 +98,7 @@ local function create_display_boards()
     if not create_display_board then return end
     for _, stop in ipairs(stops) do
         local platform_room = Room.getFromVNum(stop.exit_vnum)
-        platform_room:onCommand(display_board_command, display_board)
+        platform_room:onLook(display_board_command, display_board)
         platform_room:onLook("", function(self, ch)
             ch:echoAt("&zA nearby &c".. display_board_command .."&z shows the tram's status.")
         end)
