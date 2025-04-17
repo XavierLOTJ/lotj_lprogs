@@ -9,6 +9,7 @@ Automatically creates a command to view the transport status at each stop's plat
 distributes ambient echoes equally through out travel time, and allows for flexible
 customization of various messages.
 
+### Example Configuration
 ```lua
 -- Message echoed to the tram room when the tram arrives at a stop
 local arrive_message = "&wA tram screeches to a halt before the platform, the doors open and passengers begin to disembark."
