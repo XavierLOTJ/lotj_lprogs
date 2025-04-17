@@ -1,29 +1,14 @@
--- Message echoed to the tram room when the tram arrives at a stop
 local arrive_message = "&wA tram screeches to a halt before the platform, the doors open and passengers begin to disembark."
--- Message echoed to the tram room when the tram departs from a stop
 local depart_message = "&wThe doors close and the tram pulls away from the platform, screeching down the tracks"
 
--- Message echoed inside the tram when it arrives at a stop
 local door_open_message = "&wYour weight shifts as the trams slows down before the doors part to allow passengers to disembark."
--- Message echoed inside the tram when it departs from a stop
 local door_close_message = "&wAs the doors close and the tram pulls away from the platform, the tram subtly rumbles beneath your feet."
 
--- If true, create command to view transport status
-local create_display_board = true 
--- Word to 'look' at to view transport status
-local display_board_command = "display" 
--- Message echoed to the platform rooms when the display board is updated. If empty (""), no update message will be echoed.
-local display_board_message = "&wThe digital display board beeps softly as the transport information is updated."
 
--- List of stops for the tram
---[[
-name:           Name of the stop, used for display purposes
-exit_direction: Direction of the exit from the tram room to the platform room
-exit_vnum:      Vnum of the platform room
-stop_time:      Time the tram spends at the stop, in seconds
-travel_time:    Time it takes to travel TO this stop, in seconds
-travel_echoes:  List of messages echoed inside the tram as it travels TO this stop
-]]
+local create_display_board = true 
+local display_board_command = "display" 
+local display_board_message = ""
+
 local stops = {
     {
         name = "Residential District",
