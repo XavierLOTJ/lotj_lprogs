@@ -72,3 +72,40 @@ local stops = {
     }
 }
 ```
+
+## slicing_minigame.lua
+A minigame/quest module that requires the player to play a Wordle-like slicing
+game to reap the rewards (or suffer the consequences of failure!)
+
+### Example Configuration
+```lua
+-- How long the slice sequence is
+local slice_length = 3
+-- How many attempts the user has
+local slice_attempts = 5
+-- How long the user has to complete the slice sequence, in seconds
+local slice_timeout = 120
+-- The minimum Slicer level required to begin the minigame
+local slice_minimum_level = 0
+-- The name of the terminal
+local slice_terminal_name = "&wCorellia Security Authority"
+-- The command to start the slicing minigame
+local slice_command = "bypass"
+-- The time the user is locked out of the terminal after failing to slice the sequence, in seconds
+local slice_lockout_time = 15
+
+-- Primary color code for display purposes
+local primary_color = "&C"
+-- Secondary color code for display purposes
+local secondary_color = "&z"
+
+-- Called when the user fails to slice the sequence or times out
+local slice_failed = function(char)
+    char:echoAt("&RYou fail to slice the sequence!")
+end
+
+-- Called when the user successfully slices the sequence
+local slice_successful = function(char)
+    char:echoAt("&GYou successfully slice the sequence!")
+end
+```
