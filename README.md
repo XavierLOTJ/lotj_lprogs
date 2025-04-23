@@ -102,10 +102,12 @@ local secondary_color = "&z"
 -- Called when the user fails to slice the sequence or times out
 local slice_failed = function(char)
     char:echoAt("&RYou fail to slice the sequence!")
+    --This could hurt the player, damage their equipment, alert nearby rooms, or trigger messages to planetary authorities.
 end
 
 -- Called when the user successfully slices the sequence
 local slice_successful = function(char)
     char:echoAt("&GYou successfully slice the sequence!")
+    --This could give the player credits, reward experience, or do things like unlock nearby doors.
 end
 ```
