@@ -4,8 +4,8 @@
 local slice_length = 3
 local slice_attempts = 5
 local slice_timeout = 120
-local slice_minimum_level = 0
-local slice_terminal_name = "&wCorellia Security Authority"
+local slice_minimum_level = 15
+local slice_terminal_name = "&CC&worellia &CS&wecurity &CA&wuthority"
 local slice_command = "bypass"
 local slice_lockout_time = 15
 
